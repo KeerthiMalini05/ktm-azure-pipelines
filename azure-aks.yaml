@@ -13,7 +13,7 @@ spec:
         app: my-python-app
     spec:
       containers:
-      - name: mypythondockerrepo
+      - name: keerthimalini05/ktm-azure-pipelines
         image: keerthimalini05/ktm-azure-pipelines:#{Build.BuildId}#
         ports:
         - containerPort: 8080
