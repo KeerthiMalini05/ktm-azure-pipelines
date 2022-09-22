@@ -39,3 +39,11 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+- stage : push1
+    title: "Pushing 1st Docker image"
+    type: push
+    image_name: "keerthi05/azure-pipeline-img"
+    tag: "latest"
+    stage: "push" 
+    registry: dockerhub
+    candidate: ${{build}}
